@@ -6,11 +6,10 @@ Object Oriented Programming command-line application with Ruby where players tak
 Details:
 <br>
 - Players start with 3 lives.
-- A player loses a life if they get their question wrong while any other player gets their question right in the same turn.
-- A player loses no life if they get their question right, every player gets their question right, or every player gets their question wrong in the same turn.
+- Players lose a life if they answer incorrectly.
 - At the end of every turn, the game outputs the count of each player's lives.
-- The game doesn't end until one player is remaining with life.
-- When the game ends, the game outputs who won and the count of each player's lives.
+- The game doesn't end until one player is remaining with life or every player is out (tie) - whichever comes first.
+- When the game ends, the game congratulates the sole winner or announces a tie.
 
 ## Object Oriented Design (NOT FINAL)
 
@@ -46,15 +45,18 @@ Details:
 
 ### Methods for each Class
 
+Note: getter/setter methods for instance variables are not listed.
+
 - Game
+  - one_remaining?
+  - tie?
   - start
 - Question
-  - what
   - try
 - Life
   - decrease
 - Player
-  - correct
   - incorrect
+  - out?
 - Turn
   - ask
