@@ -25,7 +25,7 @@ class Player
   end
 
   def out?
-    life.zero?
+    life.lives.zero?
   end
 
   def to_s
