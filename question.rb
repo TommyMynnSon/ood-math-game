@@ -4,16 +4,16 @@
 class Question
   @@id = 0
 
-  attr_accessor :id, :operand_one, :operand_two, :answer, :what
+  attr_accessor :id, :op_one, :op_two, :answer, :what
 
   def initialize
     @@id += 1
 
     self.id = @@id
-    self.operand_one = rand 1..20
-    self.operand_two = rand 1..20
-    self.answer = operand_one + operand_two
-    self.what = "What does #{operand_one} + #{operand_two} equal?"
+    self.op_one = rand 1..20
+    self.op_two = rand 1..20
+    self.answer = op_one + op_two
+    self.what = "What does #{op_one} + #{op_two} equal?"
   end
 
   def try(attempt)
@@ -21,6 +21,6 @@ class Question
   end
 
   def to_s
-    "Question {id: #{id}, operand_one: #{operand_one}, operand_two: #{operand_two}, answer: #{answer}, what: '#{what}'}"
+    "Question { id: #{id}, op_one: #{op_one}, op_two: #{op_two}, answer: #{answer}, what: '#{what}' }"
   end
 end
