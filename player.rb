@@ -24,6 +24,10 @@ class Player
     life.decrease
   end
 
+  def out?
+    life.zero?
+  end
+
   def to_s
     "Player { id: #{id}, username: #{username}, life: #{life} }"
   end
