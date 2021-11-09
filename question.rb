@@ -2,17 +2,18 @@
 
 # Question class
 class Question
-  attr_reader :operand_one, :operand_two, :answer, :what, :id
-
   @@id = 0
+
+  attr_accessor :id, :operand_one, :operand_two, :answer, :what
 
   def initialize
     @@id += 1
-    @id = @@id
-    @operand_one = rand 1..20
-    @operand_two = rand 1..20
-    @answer = @operand_one + @operand_two
-    @what = "What does #{@operand_one} + #{@operand_two} equal?"
+
+    self.id = @@id
+    self.operand_one = rand 1..20
+    self.operand_two = rand 1..20
+    self.answer = operand_one + operand_two
+    self.what = "What does #{operand_one} + #{operand_two} equal?"
   end
 
   def try(attempt)
