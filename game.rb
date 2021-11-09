@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'question'
+require_relative 'turn'
 
 # Game class
 class Game
