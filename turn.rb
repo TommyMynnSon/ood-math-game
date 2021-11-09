@@ -17,7 +17,7 @@ class Turn
   end
 
   def ask
-    puts "----- TURN #{id} -----"
+    puts "[TURN #{id}]"
 
     players.each do |player|
       next if player.out?
