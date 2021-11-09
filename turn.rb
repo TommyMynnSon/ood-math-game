@@ -20,6 +20,8 @@ class Turn
     puts "----- TURN #{id} -----"
 
     players.each do |player|
+      next if player.out?
+
       question = Question.new
 
       puts "#{player.username}'s turn: #{question.what}"
