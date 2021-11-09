@@ -16,10 +16,6 @@ class Player
     self.life = Life.new
   end
 
-  def correct
-    'Player.correct method to be implemented when lives count of a player must increase.'
-  end
-
   def incorrect
     life.decrease
   end
