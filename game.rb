@@ -2,6 +2,7 @@
 
 require_relative 'question'
 require_relative 'turn'
+require_relative 'game_announcer'
 
 # Game class
 class Game
