@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
+require_relative 'constants'
+
 # Life class
 class Life
-  STARTING_LIVES = 3
-
   @@id = 0
 
   attr_accessor :id, :lives
@@ -12,7 +12,7 @@ class Life
     @@id += 1
 
     self.id = @@id
-    self.lives = STARTING_LIVES
+    self.lives = Constants::STARTING_LIVES
   end
 
   def decrease
